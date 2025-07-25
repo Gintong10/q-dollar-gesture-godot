@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="q dollar try"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://ctiim2p5xvpvx"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://assets/icon.svg"
 
 [autoload]
 
-QPointCloudRecognizer="*res://q_recognizer/q_point_cloud_recognizer.gd"
+Recognizer="*res://scripts/1recognizer.gd"
 
 [editor_plugins]
 
@@ -39,3 +40,8 @@ recognize_gesture={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

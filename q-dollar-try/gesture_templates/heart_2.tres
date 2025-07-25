@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Gesture" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Gesture" load_steps=2 format=3 uid="uid://evhb1ommys3s"]
 
-[ext_resource type="Script" path="res://q_recognizer/gesture.gd" id="1_f06hg"]
+[ext_resource type="Script" uid="uid://c23v1e1xbc0qs" path="res://q_recognizer/gesture.gd" id="1_f06hg"]
 
 [resource]
 script = ExtResource("1_f06hg")

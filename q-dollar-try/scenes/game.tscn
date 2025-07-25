@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctiim2p5xvpvx"]
+
+[ext_resource type="Texture2D" uid="uid://cfexki4527kfa" path="res://assets/icon.svg" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://o3c1xgav6dmd" path="res://scenes/enemy.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://dh2l8ecsypqw4" path="res://scripts/test_scene.gd" id="3_lbhrr"]
+[ext_resource type="Script" uid="uid://cidhtht3f76wj" path="res://q_recognizer/gesture_node.gd" id="3_lnu2h"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(590, 291)
+texture = ExtResource("1_uwrxv")
+
+[node name="Enemy" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(983, 569)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_lbhrr")
+
+[node name="Label" type="Label" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 492.0
+offset_right = 683.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "Gesture"
+
+[node name="GestureNode" type="Node2D" parent="Control"]
+unique_name_in_owner = true
+script = ExtResource("3_lnu2h")
+metadata/_custom_type_script = "uid://cidhtht3f76wj"
